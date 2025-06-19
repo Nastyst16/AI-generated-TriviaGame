@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Triviador-AI
 
-## Getting Started
+![Triviador-AI Banner](./public/banner.png) <!-- dacă ai o imagine -->
 
-First, run the development server:
+---
+
+## Descriere
+
+**Triviador-AI** este un joc trivia multiplayer bazat pe hărți de teritorii, unde jucătorii se luptă să cucerească teritorii prin răspunsuri corecte la întrebări generate AI. Jocul integrează API-ul Google Gemini pentru generarea dinamică a întrebărilor, oferind un gameplay interactiv și educativ.
+
+---
+
+## Funcționalități principale
+
+- **Multiplayer turn-based** pe o hartă cu teritorii adiacente.
+- Alegerea teritoriilor inițiale și cucerirea lor prin întrebări trivia.
+- Alegerea dificultății întrebărilor la începutul jocului (`easy`, `medium`, `hard`).
+- La cucerirea teritoriilor adversarului, dificultatea întrebărilor crește temporar.
+- Jucătorul adversar alege topicul întrebării atunci când teritoriul atacat este ocupat.
+- Interfață modernă cu evidențiere clară a teritoriilor și stării jocului.
+- Detectare automată a câștigătorului când un jucător rămâne fără teritorii.
+
+---
+
+## Tehnologii folosite
+
+- **Next.js** (React framework) pentru frontend și API backend.
+- **TypeScript** pentru un cod sigur și scalabil.
+- **Google Gemini API** pentru generarea dinamică a întrebărilor trivia.
+- **Tailwind CSS** pentru styling rapid și responsive.
+- **React hooks** pentru gestionarea stării și efectelor.
+
+---
+
+## Cum rulezi proiectul local
+
+1. Clonează repo-ul:
 
 ```bash
+git clone https://github.com/username/triviador-ai.git
+cd triviador-ai
+Instalează dependențele:
+
+bash
+Copy
+npm install
+Configurează cheia API Gemini în fișierul .env.local:
+
+env
+Copy
+GEMINI_API_KEY=cheia_ta_google_gemini
+Rulează aplicația în mod dezvoltare:
+
+bash
+Copy
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Deschide browserul la adresa:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+bash
+Copy
+http://localhost:3000/game
