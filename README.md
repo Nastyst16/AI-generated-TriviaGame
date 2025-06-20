@@ -4,58 +4,66 @@
 
 ---
 
-## Descriere
+### Demo
 
-**Triviador-AI** este un joc trivia multiplayer bazat pe hărți de teritorii, unde jucătorii se luptă să cucerească teritorii prin răspunsuri corecte la întrebări generate AI. Jocul integrează API-ul Google Gemini pentru generarea dinamică a întrebărilor, oferind un gameplay interactiv și educativ.
+https://youtu.be/LnhngL4aRAI
+
+## Description
+
+**Triviador-AI** is a multiplayer trivia game set on a territory map where players compete to conquer regions by answering AI-generated questions. The game leverages the Google Gemini API to dynamically create trivia questions, delivering an engaging and educational gameplay experience.
+
+---
+![Triviador-AI Gameplay](./public/game_preview.png)
+---
+
+## Key Features
+
+- **Turn-based multiplayer** gameplay on a map with adjacent territories.  
+- Initial territory selection and conquest through trivia questions.  
+- Choice of question difficulty at game start (`easy`, `medium`, `hard`).  
+- Temporarily increased question difficulty when conquering opponent's territories.  
+- Opponent selects the topic for questions when attacking occupied territories.  
+- Modern UI with clear highlighting of territories and game state.  
+- Automatic detection of the winner when a player loses all territories.
 
 ---
 
-## Funcționalități principale
+## Technologies Used
 
-- **Multiplayer turn-based** pe o hartă cu teritorii adiacente.
-- Alegerea teritoriilor inițiale și cucerirea lor prin întrebări trivia.
-- Alegerea dificultății întrebărilor la începutul jocului (`easy`, `medium`, `hard`).
-- La cucerirea teritoriilor adversarului, dificultatea întrebărilor crește temporar.
-- Jucătorul adversar alege topicul întrebării atunci când teritoriul atacat este ocupat.
-- Interfață modernă cu evidențiere clară a teritoriilor și stării jocului.
-- Detectare automată a câștigătorului când un jucător rămâne fără teritorii.
+- **Next.js** (React framework) for frontend and backend API.  
+- **TypeScript** for type safety and scalable code.  
+- **Google Gemini API** for dynamic trivia question generation.  
+- **Tailwind CSS** for fast, responsive styling.  
+- **React hooks** for state and effect management.
 
 ---
 
-## Tehnologii folosite
+## Running Locally
 
-- **Next.js** (React framework) pentru frontend și API backend.
-- **TypeScript** pentru un cod sigur și scalabil.
-- **Google Gemini API** pentru generarea dinamică a întrebărilor trivia.
-- **Tailwind CSS** pentru styling rapid și responsive.
-- **React hooks** pentru gestionarea stării și efectelor.
+1. Clone the repository:
+```
+  git clone https://github.com/username/triviador-ai.git
+  cd triviador-ai
+```
 
----
+2. Install dependencies:
+```
+  npm install
+```
 
-## Cum rulezi proiectul local
+3. Set your Google Gemini API key in a .env.local file:
+```
+  GEMINI_API_KEY=your_google_gemini_api_key
+```
 
-1. Clonează repo-ul:
+4. Start the development server:
+```
+  npm run dev
+```
 
-```bash
-git clone https://github.com/username/triviador-ai.git
-cd triviador-ai
-Instalează dependențele:
+5. Open your browser and navigate to:
+```
+  http://localhost:3000/game
+```
 
-bash
-Copy
-npm install
-Configurează cheia API Gemini în fișierul .env.local:
-
-env
-Copy
-GEMINI_API_KEY=cheia_ta_google_gemini
-Rulează aplicația în mod dezvoltare:
-
-bash
-Copy
-npm run dev
-Deschide browserul la adresa:
-
-bash
-Copy
-http://localhost:3000/game
+If you want to contribute or report issues, feel free to open a pull request or issue on GitHub.
