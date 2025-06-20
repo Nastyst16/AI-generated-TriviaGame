@@ -1,6 +1,6 @@
 # Triviador-AI
 
-![Triviador-AI Banner](./public/banner.png) <!-- dacă ai o imagine -->
+![Triviador-AI Banner](./public/icon.jpg)
 
 ---
 
